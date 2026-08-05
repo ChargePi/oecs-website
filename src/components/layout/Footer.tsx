@@ -1,4 +1,5 @@
-import { ExternalLink, Zap } from 'lucide-react'
+import { Zap } from 'lucide-react'
+import { GithubIcon } from '@/components/icons/github-icon'
 import { Separator } from '@/components/ui/separator'
 import { GITHUB_URL } from '@/lib/constants'
 
@@ -19,10 +20,10 @@ export function Footer() {
           href={GITHUB_URL}
           target="_blank"
           rel="noreferrer"
-          className="flex h-11 items-center gap-1.5 transition-colors hover:text-foreground"
+          aria-label="View on GitHub"
+          className="flex size-11 items-center justify-center transition-colors hover:text-foreground"
         >
-          GitHub
-          <ExternalLink className="size-3.5" aria-hidden="true" />
+          <GithubIcon className="size-5" aria-hidden="true" />
         </a>
       </div>
     </footer>
