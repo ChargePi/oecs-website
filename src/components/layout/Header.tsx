@@ -1,4 +1,5 @@
 import { Menu, Zap } from 'lucide-react'
+import { GithubIcon } from '@/components/icons/github-icon'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { GITHUB_URL, NAV_LINKS } from '@/lib/constants'
@@ -25,9 +26,9 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Button asChild size="sm">
-            <a href={GITHUB_URL} target="_blank" rel="noreferrer">
-              View on GitHub
+          <Button asChild variant="ghost" size="icon">
+            <a href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="View on GitHub">
+              <GithubIcon className="size-5" aria-hidden="true" />
             </a>
           </Button>
         </div>
