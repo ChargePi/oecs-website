@@ -17,6 +17,8 @@ CMD ["pnpm", "dev", "--host", "0.0.0.0"]
 
 # ---- Build target: produce static assets ----
 FROM deps AS build
+ARG VITE_OECS_HUB_URL
+ENV VITE_OECS_HUB_URL=${VITE_OECS_HUB_URL}
 COPY . .
 RUN pnpm build
 

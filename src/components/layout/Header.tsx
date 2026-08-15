@@ -2,7 +2,7 @@ import { Menu, Zap } from 'lucide-react'
 import { GithubIcon } from '@/components/icons/github-icon'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
-import { GITHUB_URL, NAV_LINKS } from '@/lib/constants'
+import { GITHUB_URL, NAV_LINKS, OECS_HUB_URL } from '@/lib/constants'
 
 export function Header() {
   return (
@@ -25,7 +25,14 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
+          {OECS_HUB_URL && (
+            <Button asChild variant="ghost" size="sm">
+              <a href={OECS_HUB_URL} target="_blank" rel="noreferrer">
+                OECS Hub
+              </a>
+            </Button>
+          )}
           <Button asChild variant="ghost" size="icon">
             <a href={GITHUB_URL} target="_blank" rel="noreferrer" aria-label="View on GitHub">
               <GithubIcon className="size-5" aria-hidden="true" />
@@ -56,6 +63,13 @@ export function Header() {
                   {link.label}
                 </a>
               ))}
+              {OECS_HUB_URL && (
+                <Button asChild variant="outline" className="mt-2">
+                  <a href={OECS_HUB_URL} target="_blank" rel="noreferrer">
+                    OECS Hub
+                  </a>
+                </Button>
+              )}
               <Button asChild className="mt-2">
                 <a href={GITHUB_URL} target="_blank" rel="noreferrer">
                   View on GitHub

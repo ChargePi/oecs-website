@@ -1,7 +1,7 @@
 import { Zap } from 'lucide-react'
 import { GithubIcon } from '@/components/icons/github-icon'
 import { Separator } from '@/components/ui/separator'
-import { GITHUB_URL } from '@/lib/constants'
+import { GITHUB_URL, OECS_HUB_URL } from '@/lib/constants'
 
 export function Footer() {
   return (
@@ -16,15 +16,27 @@ export function Footer() {
           Open, vendor-neutral charger specification schema. Not affiliated with any hardware
           vendor.
         </p>
-        <a
-          href={GITHUB_URL}
-          target="_blank"
-          rel="noreferrer"
-          aria-label="View on GitHub"
-          className="flex size-11 items-center justify-center transition-colors hover:text-foreground"
-        >
-          <GithubIcon className="size-5" aria-hidden="true" />
-        </a>
+        <div className="flex items-center gap-4">
+          {OECS_HUB_URL && (
+            <a
+              href={OECS_HUB_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              OECS Hub
+            </a>
+          )}
+          <a
+            href={GITHUB_URL}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View on GitHub"
+            className="flex size-11 items-center justify-center transition-colors hover:text-foreground"
+          >
+            <GithubIcon className="size-5" aria-hidden="true" />
+          </a>
+        </div>
       </div>
     </footer>
   )

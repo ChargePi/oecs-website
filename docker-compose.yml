@@ -15,6 +15,8 @@ services:
     build:
       context: .
       target: production
+      args:
+        VITE_OECS_HUB_URL: ${VITE_OECS_HUB_URL:-}
     ports:
       - '8080:80'
     profiles: ['prod']
