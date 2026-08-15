@@ -1,7 +1,9 @@
+import { Reveal } from '@/components/Reveal'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { MESSY_VENDOR_SPEC_EXCERPTS, SAMPLE_OECS_SCHEMA } from '@/data/sample-schema'
+import { STAGGER_DELAYS } from '@/lib/constants'
 
 function MessyPdfPane() {
   return (
@@ -47,8 +49,12 @@ export function SchemaExampleSection() {
       </div>
 
       <div className="mt-12 hidden gap-6 md:grid md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]">
-        <MessyPdfPane />
-        <CleanSchemaPane />
+        <Reveal delay={STAGGER_DELAYS[0]} duration={700}>
+          <MessyPdfPane />
+        </Reveal>
+        <Reveal delay={STAGGER_DELAYS[1]} duration={700}>
+          <CleanSchemaPane />
+        </Reveal>
       </div>
 
       <Tabs defaultValue="pdfs" className="mt-12 md:hidden">

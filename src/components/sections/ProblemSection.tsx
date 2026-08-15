@@ -1,5 +1,7 @@
 import { FileWarning, Ruler, SearchX } from 'lucide-react'
+import { Reveal } from '@/components/Reveal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { STAGGER_DELAYS } from '@/lib/constants'
 
 const PROBLEMS = [
   {
@@ -35,16 +37,18 @@ export function ProblemSection() {
       </div>
 
       <div className="mt-12 grid gap-4 md:grid-cols-3">
-        {PROBLEMS.map((problem) => (
-          <Card key={problem.title}>
-            <CardHeader className="flex flex-row items-center gap-2">
-              <problem.icon className="size-5 text-primary" aria-hidden="true" />
-              <CardTitle className="text-base">{problem.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">{problem.description}</p>
-            </CardContent>
-          </Card>
+        {PROBLEMS.map((problem, i) => (
+          <Reveal key={problem.title} delay={STAGGER_DELAYS[i]} duration={700} className="flex">
+            <Card className="w-full">
+              <CardHeader className="flex flex-row items-center gap-2">
+                <problem.icon className="size-5 text-primary" aria-hidden="true" />
+                <CardTitle className="text-base">{problem.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">{problem.description}</p>
+              </CardContent>
+            </Card>
+          </Reveal>
         ))}
       </div>
     </section>

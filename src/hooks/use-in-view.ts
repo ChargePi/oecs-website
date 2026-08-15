@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 
-export function useInView() {
+interface UseInViewOptions {
+  threshold?: number
+  rootMargin?: string
+}
+
+export function useInView({ threshold = 0.15, rootMargin = '0px' }: UseInViewOptions = {}) {
   const ref = useRef<HTMLDivElement>(null)
   const [inView, setInView] = useState(false)
 
@@ -15,12 +20,12 @@ export function useInView() {
           observer.disconnect()
         }
       },
-      { threshold: 0.15 },
+      { threshold, rootMargin },
     )
 
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [threshold, rootMargin])
 
   return { ref, inView }
 }

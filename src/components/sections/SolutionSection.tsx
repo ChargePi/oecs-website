@@ -1,5 +1,7 @@
 import { Blocks, Code2, GitBranch, ShieldCheck } from 'lucide-react'
+import { Reveal } from '@/components/Reveal'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { STAGGER_DELAYS } from '@/lib/constants'
 
 const VALUE_PROPS = [
   {
@@ -40,16 +42,18 @@ export function SolutionSection() {
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
-        {VALUE_PROPS.map((prop) => (
-          <Card key={prop.title}>
-            <CardHeader className="flex flex-row items-center gap-2">
-              <prop.icon className="size-5 text-primary" aria-hidden="true" />
-              <CardTitle className="text-base">{prop.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground">{prop.description}</p>
-            </CardContent>
-          </Card>
+        {VALUE_PROPS.map((prop, i) => (
+          <Reveal key={prop.title} delay={STAGGER_DELAYS[i]} duration={700} className="flex">
+            <Card className="w-full">
+              <CardHeader className="flex flex-row items-center gap-2">
+                <prop.icon className="size-5 text-primary" aria-hidden="true" />
+                <CardTitle className="text-base">{prop.title}</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">{prop.description}</p>
+              </CardContent>
+            </Card>
+          </Reveal>
         ))}
       </div>
     </section>

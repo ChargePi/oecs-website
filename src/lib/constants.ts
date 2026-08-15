@@ -8,3 +8,7 @@ export const NAV_LINKS = [
   { href: '#solution', label: 'Solution' },
   { href: '#schema', label: 'Schema' },
 ] as const
+
+// Single, shared stagger sequence (200ms/step) for Reveal — every section indexes
+// into this instead of inventing its own delays, so the cascade reads the same everywhere.
+export const STAGGER_DELAYS = [0, 200, 400, 600] as const
