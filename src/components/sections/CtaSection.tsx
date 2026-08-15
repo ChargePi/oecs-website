@@ -5,7 +5,7 @@ export function CtaSection() {
   return (
     <section className="mx-auto max-w-6xl px-4 py-16 md:px-8 md:py-24">
       <div className="flex flex-col items-center rounded-2xl bg-card px-6 py-16 text-center ring-1 ring-foreground/10">
-        <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">Get involved</h2>
+        <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">Get involved</h2>
         <p className="mt-4 max-w-xl text-muted-foreground">
           OECS is early and open. Help shape the schema, propose new fields, or just follow along.
         </p>

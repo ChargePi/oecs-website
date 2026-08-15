@@ -30,7 +30,7 @@ export function SolutionSection() {
   return (
     <section id="solution" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-2xl font-semibold tracking-tight md:text-4xl">
+        <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">
           OECS: one schema, every vendor
         </h2>
         <p className="mt-4 text-muted-foreground">
@@ -42,9 +42,9 @@ export function SolutionSection() {
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {VALUE_PROPS.map((prop) => (
           <Card key={prop.title}>
-            <CardHeader>
+            <CardHeader className="flex flex-row items-center gap-2">
               <prop.icon className="size-5 text-primary" aria-hidden="true" />
-              <CardTitle className="mt-2 text-base">{prop.title}</CardTitle>
+              <CardTitle className="text-base">{prop.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground">{prop.description}</p>
