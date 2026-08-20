@@ -3,6 +3,9 @@ export const GITHUB_URL = 'https://github.com/ChargePi/oecs'
 // Set at build time via VITE_OECS_HUB_URL. Hub links are omitted entirely when unset.
 export const OECS_HUB_URL = import.meta.env.VITE_OECS_HUB_URL || undefined
 
+// Set at build time via VITE_CONTACT_EMAIL. Contact link is omitted entirely when unset.
+export const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL || undefined
+
 export const NAV_LINKS = [
   { href: '#problem', label: 'Problem' },
   { href: '#solution', label: 'Solution' },
