@@ -8,13 +8,13 @@ export function HeroSection() {
     <section className="mx-auto flex min-h-[90svh] max-w-6xl flex-col items-center justify-center px-4 py-24 text-center md:px-8">
       <Reveal delay={STAGGER_DELAYS[0]} duration={700}>
         <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance md:text-6xl">
-          One standard schema for every charger spec.
+          One standard schema for every charger.
         </h1>
       </Reveal>
       <Reveal delay={STAGGER_DELAYS[1]} duration={700}>
         <p className="mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
-          Vendors ship inconsistent PDF spec sheets for the same charger features. OECS normalizes
-          them into a single, computer-readable schema — so you can compare hardware for your use case
+          Vendors provide long, inconsistent PDF spec sheets for their charger features. OECS normalizes
+          them into a single, vendor-neutral schema — so you can compare hardware for your use case
           in seconds, not hours.
         </p>
       </Reveal>

@@ -51,7 +51,7 @@ export function SchemaExampleSection() {
         <h2 className="text-3xl font-semibold tracking-tight md:text-5xl">See it for yourself</h2>
         <p className="mt-4 text-muted-foreground">
           Three vendors, three different ways of describing the same 22kW, 3-phase, Type 2 charger.
-          Here's what that looks like normalized.
+          Here's what that looks like in OECS.
         </p>
       </div>
 

@@ -5,15 +5,15 @@ import { STAGGER_DELAYS } from '@/lib/constants'
 
 const VALUE_PROPS = [
   {
-    icon: Code2,
-    title: 'Machine-readable',
-    description: 'A JSON/YAML schema you can validate, diff, and query with standard tooling.',
-  },
-  {
     icon: ShieldCheck,
     title: 'Vendor-neutral',
     description:
       'Field names and enums are defined once, independent of how any single vendor labels them.',
+  },
+  {
+    icon: Blocks,
+    title: 'Extensible',
+    description: 'New charger capabilities get added as fields, not another unstructured PDF.',
   },
   {
     icon: GitBranch,
@@ -22,9 +22,9 @@ const VALUE_PROPS = [
       'The schema is public and versioned — propose changes, track history, no vendor lock-in.',
   },
   {
-    icon: Blocks,
-    title: 'Extensible',
-    description: 'New charger capabilities get added as fields, not another unstructured PDF.',
+    icon: Code2,
+    title: 'Machine-readable',
+    description: 'A JSON/YAML schema you can validate, comparew, and query with standard tooling.',
   },
 ]
 
