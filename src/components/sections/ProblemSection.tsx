@@ -8,13 +8,13 @@ const PROBLEMS = [
     icon: Ruler,
     title: 'Inconsistent terminology',
     description:
-      '"Rated Amperage", "Max Output Current" and "Nominal Current" can all describe the same field — named differently by every vendor.',
+      '"Rated Amperage", "Max Output Current" and "Nominal Current" can all describe the same attribute — named differently by every vendor.',
   },
   {
     icon: FileWarning,
-    title: 'Unstructured documents',
+    title: 'Differently structured documents',
     description:
-      'Specs live in PDFs, not data. There is no reliable way to query, filter, or diff them programmatically.',
+      'Specs live in PDFs, not data. There is no easy, reliable way to compare them programmatically.',
   },
   {
     icon: SearchX,
