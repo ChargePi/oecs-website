@@ -18,22 +18,103 @@
       })()
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0a0e14" />
+    <title>OECS — Open EV Charger Schema | Open standard for EV charger specifications</title>
     <meta
       name="description"
-      content="OECS is an open, vendor-neutral, computer-readable schema for EV charger specifications — so you can compare hardware for your use case without reading a PDF."
+      content="Open, vendor-neutral schema for EV charger (EVSE) specifications. Compare AC and DC charging station hardware, connectors and OCPP support without reading PDFs."
     />
+    <meta
+      name="keywords"
+      content="EV charger schema, EVSE specification, EV charging station datasheet, charger spec comparison, OCPP, charge point operator, CPO, AC charger, DC fast charger, Type 2, CCS, open standard"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://oecs.chargepi.cc/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OECS" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://oecs.chargepi.cc/" />
     <meta property="og:title" content="OECS — Open EV Charger Schema" />
     <meta
       property="og:description"
-      content="One standard schema for every charger spec. Compare vendor hardware programmatically instead of reading PDFs."
+      content="One standard schema for every EV charger spec. Compare charging station hardware programmatically instead of reading vendor PDFs."
     />
-    <meta property="og:type" content="website" />
-    <title>OECS — Open EV Charger Schema</title>
+    <meta property="og:image" content="https://oecs.chargepi.cc/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="OECS — Open EV Charger Schema" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OECS — Open EV Charger Schema" />
+    <meta
+      name="twitter:description"
+      content="One standard schema for every EV charger spec. Compare charging station hardware programmatically instead of reading vendor PDFs."
+    />
+    <meta name="twitter:image" content="https://oecs.chargepi.cc/og-image.png" />
+    <meta name="twitter:image:alt" content="OECS — Open EV Charger Schema" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://oecs.chargepi.cc/#website",
+            "url": "https://oecs.chargepi.cc/",
+            "name": "OECS — Open EV Charger Schema",
+            "description": "Open, vendor-neutral schema for EV charger (EVSE) specifications.",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://github.com/ChargePi#organization" }
+          },
+          {
+            "@type": "Organization",
+            "@id": "https://github.com/ChargePi#organization",
+            "name": "ChargePi",
+            "url": "https://github.com/ChargePi",
+            "logo": "https://oecs.chargepi.cc/apple-touch-icon.png"
+          },
+          {
+            "@type": "SoftwareSourceCode",
+            "@id": "https://oecs.chargepi.cc/#schema",
+            "name": "Open EV Charger Schema (OECS)",
+            "alternateName": "OECS",
+            "description": "A vendor-neutral, open, machine-readable JSON/YAML schema for describing EV charger hardware specifications, so charging station hardware can be compared programmatically.",
+            "url": "https://oecs.chargepi.cc/",
+            "codeRepository": "https://github.com/ChargePi/oecs",
+            "license": "https://opensource.org/licenses/MIT",
+            "programmingLanguage": ["JSON", "YAML"],
+            "keywords": "EV charging, EV charger, EVSE, charging station, charger specification, OCPP, charge point operator, open standard",
+            "about": [
+              { "@type": "Thing", "name": "Electric vehicle charging station" },
+              { "@type": "Thing", "name": "Electric vehicle supply equipment" }
+            ],
+            "author": { "@id": "https://github.com/ChargePi#organization" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>One standard schema for every charger.</h1>
+      <p>
+        Vendors provide long, inconsistent PDF spec sheets for their charger features. OECS
+        normalizes them into a single, vendor-neutral schema — so you can compare hardware for your
+        use case in seconds, not hours.
+      </p>
+      <h2>Comparing chargers means reading PDFs. A lot of them.</h2>
+      <p>Every vendor documents the same handful of features — differently.</p>
+      <h2>OECS: one schema, every vendor</h2>
+      <p>
+        A vendor-neutral, open specification for describing charger hardware — versioned,
+        structured, and free to use.
+      </p>
+      <p><a href="https://github.com/ChargePi/oecs">View on GitHub</a></p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

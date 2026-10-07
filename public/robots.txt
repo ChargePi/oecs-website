@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oecs.chargepi.cc/sitemap.xml
